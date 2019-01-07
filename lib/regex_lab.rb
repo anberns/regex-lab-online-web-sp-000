@@ -20,7 +20,7 @@ end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
   first = text.match(/\A[A-Z]/)
-  last = text.match(/.\z/)
+  last = text.match(/[.]\z/)
   if first != nil && last != nil 
     return true 
   else
