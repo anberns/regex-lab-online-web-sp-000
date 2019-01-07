@@ -30,9 +30,8 @@ end
 
 def valid_phone_number?(phone)
   
-  no_dashes = phone.match(/[0-9]{10}/)
-  dashes = phone.match(/[0-9]{3}-[0-9]{3}-[0-9]{4}/)
-  if no_dashes != nil || dashes != nil 
+  digits = phone.scan(/[0-9]{1}/)
+  if digits.size == 10
     return true 
   else
     return false
