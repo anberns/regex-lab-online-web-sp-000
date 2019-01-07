@@ -29,5 +29,13 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-
+  
+  no_dashes = phone.match(/[0-9]{10}/)
+  dashes = phone.match(/[0-9]{3}-[0-9]{3}-[0-9]{4}/)
+  if no_dashes != nil || dashes != nil 
+    return true 
+  else
+    return false
+  end
+  
 end
